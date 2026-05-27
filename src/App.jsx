@@ -38,7 +38,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#050505] flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-[#050505] flex flex-col items-center justify-start px-4 pt-16 pb-20">
       <div className="w-full max-w-2xl flex flex-col items-center">
         {/* Hero Section */}
         <motion.div
@@ -73,17 +73,20 @@ export default function Home() {
           </p>
 
           {/* Descrição */}
-          <p className="mt-5 sm:mt-6 mb-8 sm:mb-10 text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center">
+          <p className="mt-5 sm:mt-6 text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center">
             Música digital para artistas virtuais.
           </p>
         </motion.div>
+
+        {/* ESPAÇADOR INVISÍVEL FORÇADO PARA MOBILE */}
+        <div className="h-10 sm:h-12 w-full block clear-both" />
 
         {/* Links Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-4 sm:gap-4 md:gap-5"
+          className="w-[92%] sm:w-full max-w-xs sm:max-w-sm md:max-w-md px-0 flex flex-col gap-4 sm:gap-4 md:gap-5"
         >
           {links.map((link, index) => {
             const Icon = link.icon

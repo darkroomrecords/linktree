@@ -69,10 +69,10 @@ export default function App() {
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-wider mb-1 sm:mb-2">
             DARK ROOM
           </h1>
-          <p className="text-xl sm:text-2xl md:text-4xl font-light tracking-widest text-[#d4b45f]">
+          <p className="text-xl sm:text-2xl md:text-4xl font-light tracking-widest text-[#d4b45f] mb-3 sm:mb-4">
             RECORDS
           </p>
-          <p className="mt-4 sm:mt-6 text-xs sm:text-sm md:text-base text-[#999999] font-light tracking-wide max-w-xs sm:max-w-md mx-auto">
+          <p className="mt-5 sm:mt-6 text-xs sm:text-sm md:text-base text-[#999999] font-light tracking-wide max-w-xs sm:max-w-md mx-auto">
             Selo fonográfico independente focado em música digital e artistas virtuais.
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-4 sm:gap-4 md:gap-5 mt-6 sm:mt-8 md:mt-10"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-4 sm:gap-4 md:gap-5 mt-5 sm:mt-6 md:mt-8"
         >
           {links.map((link, index) => {
             const Icon = link.icon
@@ -96,7 +96,7 @@ export default function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
                 whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(212,180,95,0.3)' }}
-                className="block p-3 sm:p-4 md:p-4 border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group"
+                className="block py-3.5 px-4 sm:p-4 md:p-4 border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group"
               >
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-[rgba(212,180,95,0.15)] flex items-center justify-center group-hover:bg-[rgba(212,180,95,0.25)] transition-colors">

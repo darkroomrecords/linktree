@@ -15,12 +15,33 @@ export const spacing = {
     className: 'gap-4 sm:gap-4 md:gap-5'
   },
 
+  // Gap entre o título (DARK ROOM) e o subtítulo (RECORDS)
+  // DE: mb-1 (4px) -> PARA: mb-3 (12px)
+  // Motivo: Dar identidade própria ao "RECORDS" sem que ele suma sob o título principal.
+  titleToRecords: {
+    mobile: '3',      // 12px
+    tablet: '4',      // 16px
+    className: 'mb-3 sm:mb-4'
+  },
+
+  // Gap between records and description
+  // DE: mt-4 (16px) -> PARA: mt-5 (20px)
+  // Motivo: Afastar levemente o bloco de texto para melhorar a legibilidade.
+  recordsToDescription: {
+    mobile: '5',      // 20px
+    tablet: '6',      // 24px
+    className: 'mt-5 sm:mt-6'
+  },
+
   // Margin top from description text to buttons
+  // DE: mt-6 (24px) -> PARA: mt-5 (20px)
+  // Motivo: No print atual, a distância parece que o bloco de links está "desgarrado" do topo.
+  // Reduzindo um pouco, o cabeçalho conversa melhor com a lista de links.
   textToButtons: {
-    mobile: '6',      // 24px
-    tablet: '8',      // 32px
-    desktop: '10',    // 40px
-    className: 'mt-6 sm:mt-8 md:mt-10'
+    mobile: '5',      // 20px
+    tablet: '6',      // 24px
+    desktop: '8',     // 32px
+    className: 'mt-5 sm:mt-6 md:mt-8'
   },
 
   // Gap between logo and title
@@ -30,26 +51,15 @@ export const spacing = {
     className: 'mb-6 sm:mb-8'
   },
 
-  // Gap between title and records text
-  titleToRecords: {
-    mobile: '1',      // 4px
-    tablet: '2',      // 8px
-    className: 'mb-1 sm:mb-2'
-  },
-
-  // Gap between records and description
-  recordsToDescription: {
-    mobile: '4',      // 16px
-    tablet: '6',      // 24px
-    className: 'mt-4 sm:mt-6'
-  },
-
   // Padding inside buttons
+  // DE: p-3 (12px) -> PARA: py-3.5 px-4 
+  // Motivo: Os botões estão um pouco "altos" verticalmente em relação ao espaço nas laterais.
+  // Se estiver usando Tailwind puro no componente, recomendo separar o padding vertical (py) do horizontal (px).
   buttonPadding: {
-    mobile: '3',      // 12px
-    tablet: '4',      // 16px
-    desktop: '4',     // 16px
-    className: 'p-3 sm:p-4 md:p-4'
+    mobile: 'py-3.5 px-4',
+    tablet: 'p-4',
+    desktop: 'p-4',
+    className: 'py-3.5 px-4 sm:p-4 md:p-4'
   },
 
   // Gap between icon and text inside button
@@ -88,6 +98,7 @@ export const spacing = {
  * 1 = 4px
  * 2 = 8px
  * 3 = 12px
+ * 3.5 = 14px
  * 4 = 16px
  * 5 = 20px
  * 6 = 24px

@@ -97,6 +97,24 @@ export default function Home() {
             )
           })}
         </motion.div>
+
+        {/* Footer */}
+        <footer className="mt-20 pb-10 text-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="flex flex-col items-center gap-4"
+          >
+            <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-[rgba(212,180,95,0.4)] to-transparent mb-2" />
+            <p className="text-[10px] text-[#666666] tracking-[0.2em] font-light uppercase">
+              Dark Room Records © {new Date().getFullYear()}
+            </p>
+            <p className="text-[9px] text-[#444444] tracking-widest font-light italic">
+              "Música digital para artistas virtuais"
+            </p>
+          </motion.div>
+        </footer>
       </div>
     </div>
   )

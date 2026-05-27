@@ -82,7 +82,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-5 sm:gap-6 md:gap-7"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-5 sm:gap-6 md:gap-7 mt-12 sm:mt-16 md:mt-20"
         >
           {links.map((link, index) => {
             const Icon = link.icon
@@ -106,7 +106,7 @@ export default function App() {
                     <p className="text-xs sm:text-sm font-semibold tracking-wide text-[#f5f5f5]">
                       {link.title}
                     </p>
-                    <p className="text-xs text-[#999999] font-light tracking-wide truncate">
+                    <p className="text-xs text-[#999999] font-light tracking-wide truncate mt-2 sm:mt-3">
                       {link.subtitle}
                     </p>
                   </div>

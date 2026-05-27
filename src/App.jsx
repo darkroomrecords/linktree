@@ -1,6 +1,7 @@
 import { Mail, Music, TrendingUp, Globe, Instagram } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { spacing } from './config/spacing'
+// Spacing values are now hardcoded to ensure Tailwind compilation
+// import { spacing } from './config/spacing'
 
 export default function Home() {
   const links = [
@@ -66,23 +67,23 @@ export default function Home() {
             DARK ROOM
           </h1>
 
-          {/* Subtitle - Using spacing.titleToRecords */}
-          <p className={`text-xl sm:text-2xl md:text-4xl font-light tracking-widest text-[#d4b45f] ${spacing.titleToRecords.className}`}>
+          {/* Subtitle */}
+          <p className="text-xl sm:text-2xl md:text-4xl font-light tracking-widest text-[#d4b45f] mb-3 sm:mb-4">
             RECORDS
           </p>
 
-          {/* Description - Using spacing.recordsToDescription and spacing.textToButtons */}
-          <p className={`${spacing.recordsToDescription.className} ${spacing.textToButtons.className} text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center`}>
+          {/* Descrição */}
+          <p className="mt-5 sm:mt-6 mb-8 sm:mb-10 text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center">
             Música digital para artistas virtuais.
           </p>
         </motion.div>
 
-        {/* Links Section - Using spacing.buttonGap */}
+        {/* Links Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className={`w-full max-w-xs sm:max-w-sm md:max-w-md ${spacing.containerPadding.className} flex flex-col ${spacing.buttonGap.className}`}
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-4 sm:gap-4 md:gap-5"
         >
           {links.map((link, index) => {
             const Icon = link.icon
@@ -96,9 +97,9 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
                 whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(212,180,95,0.3)' }}
-                className={`block ${spacing.buttonPadding.className} border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group`}
+                className="block py-3.5 px-4 sm:p-4 md:p-4 border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group"
               >
-                <div className={`flex items-center ${spacing.iconToText.className}`}>
+                <div className="flex items-center gap-2 sm:gap-3">
                   <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-[rgba(212,180,95,0.15)] flex items-center justify-center group-hover:bg-[rgba(212,180,95,0.25)] transition-colors">
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#d4b45f]" />
                   </div>

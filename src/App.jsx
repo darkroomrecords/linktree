@@ -82,7 +82,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-3 sm:gap-4 md:gap-5"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-5 sm:gap-6 md:gap-7"
         >
           {links.map((link, index) => {
             const Icon = link.icon
@@ -96,7 +96,7 @@ export default function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
                 whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(212,180,95,0.3)' }}
-                className="block p-3 sm:p-4 md:p-4 border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group mb-2 sm:mb-3 md:mb-4"
+                className="block p-3 sm:p-4 md:p-4 border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group"
               >
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-[rgba(212,180,95,0.15)] flex items-center justify-center group-hover:bg-[rgba(212,180,95,0.25)] transition-colors">

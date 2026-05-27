@@ -34,13 +34,13 @@ export const spacing = {
   },
 
   // Margin top from description text to buttons
-  // DE: mt-6 (24px) -> PARA: mt-40 (160px)
-  // Motivo: Aumentar significativamente o espaço entre a descrição e os botões
+  // DE: mt-6 (24px) -> PARA: mt-64 (256px)
+  // Motivo: Aumentar drasticamente o espaço entre a descrição e os botões
   textToButtons: {
-    mobile: '40',     // 160px
-    tablet: '48',     // 192px
-    desktop: '64',    // 256px
-    className: 'mt-40 sm:mt-48 md:mt-64'
+    mobile: '64',     // 256px
+    tablet: '80',     // 320px
+    desktop: '96',    // 384px
+    className: 'mt-64 sm:mt-80 md:mt-96'
   },
 
   // Gap between logo and title

@@ -57,7 +57,7 @@ export default function Home() {
           </motion.div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider mb-1">DARK ROOM</h1>
           <p className="text-lg sm:text-xl md:text-2xl font-light tracking-widest text-[#d4b45f] mb-3">RECORDS</p>
-          <p className="text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center mb-6 sm:mb-8">Selo fonográfico independente focado no desenvolvimento de música digital, curadoria de identidades sonoras e lançamento de artistas virtuais na vanguarda da cultura.</p>
+          <p className="text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center mb-4 sm:mb-6">Selo fonográfico independente focado no desenvolvimento de música digital, curadoria de identidades sonoras e lançamento de artistas virtuais na vanguarda da cultura.</p>
         </motion.div>
 
         {/* ESPAÇADOR INVISÍVEL FORÇADO PARA MOBILE */}

@@ -73,7 +73,7 @@ export default function Home() {
 
           {/* Description - Using spacing.recordsToDescription */}
           <p className={`${spacing.recordsToDescription.className} text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center`}>
-            Selo fonográfico independente focado em música digital e artistas virtuais.
+            Música digital para artistas virtuais.
           </p>
         </motion.div>
 

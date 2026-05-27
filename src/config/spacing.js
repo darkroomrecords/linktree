@@ -33,14 +33,14 @@ export const spacing = {
     className: 'mt-5 sm:mt-6'
   },
 
-  // Margin top from description text to buttons
-  // DE: mt-6 (24px) -> PARA: mt-64 (256px)
-  // Motivo: Aumentar drasticamente o espaço entre a descrição e os botões
+  // Margin bottom do texto de descrição para os botões
+  // DE: mt-64 (256px) -> PARA: mb-6 (24px)
+  // Motivo: Ajuste solicitado pelo usuário para reduzir o espaço e usar margin-bottom.
   textToButtons: {
-    mobile: '64',     // 256px
-    tablet: '80',     // 320px
-    desktop: '96',    // 384px
-    className: 'mt-64 sm:mt-80 md:mt-96'
+    mobile: '6',      // 24px de espaçamento
+    tablet: '8',      // 32px de espaçamento
+    desktop: '10',    // 40px de espaçamento
+    className: 'mb-6 sm:mb-8 md:mb-10'
   },
 
   // Gap between logo and title

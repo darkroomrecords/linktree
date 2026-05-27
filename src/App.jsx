@@ -71,8 +71,8 @@ export default function Home() {
             RECORDS
           </p>
 
-          {/* Description - Using spacing.recordsToDescription */}
-          <p className={`${spacing.recordsToDescription.className} text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center`}>
+          {/* Description - Using spacing.recordsToDescription and spacing.textToButtons */}
+          <p className={`${spacing.recordsToDescription.className} ${spacing.textToButtons.className} text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center`}>
             Música digital para artistas virtuais.
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className={`w-full max-w-xs sm:max-w-sm md:max-w-md ${spacing.containerPadding.className} flex flex-col ${spacing.buttonGap.className} mt-40 sm:mt-48 md:mt-64`}
+          className={`w-full max-w-xs sm:max-w-sm md:max-w-md ${spacing.containerPadding.className} flex flex-col ${spacing.buttonGap.className}`}
         >
           {links.map((link, index) => {
             const Icon = link.icon

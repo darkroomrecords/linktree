@@ -34,14 +34,13 @@ export const spacing = {
   },
 
   // Margin top from description text to buttons
-  // DE: mt-6 (24px) -> PARA: mt-5 (20px)
-  // Motivo: No print atual, a distância parece que o bloco de links está "desgarrado" do topo.
-  // Reduzindo um pouco, o cabeçalho conversa melhor com a lista de links.
+  // DE: mt-6 (24px) -> PARA: mt-40 (160px)
+  // Motivo: Aumentar significativamente o espaço entre a descrição e os botões
   textToButtons: {
-    mobile: '5',      // 20px
-    tablet: '6',      // 24px
-    desktop: '8',     // 32px
-    className: 'mt-5 sm:mt-6 md:mt-8'
+    mobile: '40',     // 160px
+    tablet: '48',     // 192px
+    desktop: '64',    // 256px
+    className: 'mt-40 sm:mt-48 md:mt-64'
   },
 
   // Gap between logo and title

@@ -72,7 +72,7 @@ export default function App() {
           <p className="text-xl sm:text-2xl md:text-4xl font-light tracking-widest text-[#d4b45f] mb-3 sm:mb-4">
             RECORDS
           </p>
-          <p className="mt-6 sm:mt-8 md:mt-10 mb-6 sm:mb-8 md:mb-10 text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center">
+          <p className="mt-5 sm:mt-6 mb-6 sm:mb-8 md:mb-10 text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center">
             Selo fonográfico independente focado em música digital e artistas virtuais.
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-4 sm:gap-4 md:gap-5"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-6 sm:gap-7 md:gap-8"
         >
           {links.map((link, index) => {
             const Icon = link.icon

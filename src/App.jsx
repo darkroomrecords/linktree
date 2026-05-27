@@ -82,7 +82,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-sm sm:max-w-md md:max-w-2xl space-y-3 sm:space-y-4 md:space-y-5 px-2 sm:px-0"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md space-y-4 sm:space-y-5 md:space-y-6 px-3 sm:px-0"
         >
           {links.map((link, index) => {
             const Icon = link.icon
@@ -96,21 +96,21 @@ export default function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
                 whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(212,180,95,0.3)' }}
-                className="block p-3 sm:p-4 md:p-5 border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group"
+                className="block p-3 sm:p-4 md:p-4 border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group"
               >
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-[rgba(212,180,95,0.15)] flex items-center justify-center group-hover:bg-[rgba(212,180,95,0.25)] transition-colors">
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-[#d4b45f]" />
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-[rgba(212,180,95,0.15)] flex items-center justify-center group-hover:bg-[rgba(212,180,95,0.25)] transition-colors">
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#d4b45f]" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs sm:text-sm md:text-base font-semibold tracking-wide text-[#f5f5f5]">
+                    <p className="text-xs sm:text-sm font-semibold tracking-wide text-[#f5f5f5]">
                       {link.title}
                     </p>
                     <p className="text-xs text-[#999999] font-light tracking-wide truncate">
                       {link.subtitle}
                     </p>
                   </div>
-                  <div className="flex-shrink-0 text-[#d4b45f] group-hover:translate-x-1 transition-transform text-sm">
+                  <div className="flex-shrink-0 text-[#d4b45f] group-hover:translate-x-1 transition-transform text-xs">
                     →
                   </div>
                 </div>

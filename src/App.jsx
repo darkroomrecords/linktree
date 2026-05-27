@@ -1,57 +1,52 @@
+import { Mail, Music, TrendingUp, Globe, Instagram } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { Music, TrendingUp, Instagram, Globe, Mail } from 'lucide-react'
+import { spacing } from './config/spacing'
 
-export default function App() {
+export default function Home() {
   const links = [
     {
-      icon: TrendingUp,
       title: 'OUÇA NO SPOTIFY',
       subtitle: 'EM BREVE',
       href: '#',
-      color: '#1DB954',
+      icon: Music,
     },
     {
-      icon: Music,
       title: 'TIKTOK OFICIAL',
       subtitle: '@thedarkroomrecords',
       href: 'https://www.tiktok.com/@thedarkroomrecords',
+      icon: TrendingUp,
     },
     {
-      icon: Instagram,
       title: 'INSTAGRAM OFICIAL',
       subtitle: '@thedarkroomrecords',
       href: 'https://www.instagram.com/thedarkroomrecords',
+      icon: Instagram,
     },
     {
-      icon: Globe,
       title: 'WEBSITE OFICIAL',
       subtitle: 'www.thedarkroomrecords.com',
       href: 'https://www.thedarkroomrecords.com',
+      icon: Globe,
     },
     {
-      icon: Mail,
       title: 'CONTATO / LABEL',
       subtitle: 'contact@thedarkroomrecords.com',
       href: 'mailto:contact@thedarkroomrecords.com',
+      icon: Mail,
     },
   ]
 
   return (
-    <div className="min-h-screen bg-[#050505] text-[#f5f5f5] overflow-hidden">
-      {/* Background */}
-      <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(212,180,95,0.05)] via-transparent to-transparent" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-8">
-        {/* Logo Section */}
+    <div className="min-h-screen bg-[#050505] flex items-center justify-center px-4 py-12">
+      <div className="w-full max-w-2xl flex flex-col items-center">
+        {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           className="mb-12 text-center"
         >
+          {/* Logo */}
           <div className="relative mb-6 sm:mb-8 inline-block">
             <motion.div
               animate={{ opacity: [0.4, 0.7, 0.4] }}
@@ -66,23 +61,28 @@ export default function App() {
             />
           </div>
 
+          {/* Title */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-wider mb-1 sm:mb-2">
             DARK ROOM
           </h1>
-          <p className="text-xl sm:text-2xl md:text-4xl font-light tracking-widest text-[#d4b45f] mb-3 sm:mb-4">
+
+          {/* Subtitle - Using spacing.titleToRecords */}
+          <p className={`text-xl sm:text-2xl md:text-4xl font-light tracking-widest text-[#d4b45f] ${spacing.titleToRecords.className}`}>
             RECORDS
           </p>
-          <p className="mt-5 sm:mt-6 mb-6 sm:mb-8 md:mb-10 text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center">
+
+          {/* Description - Using spacing.recordsToDescription */}
+          <p className={`${spacing.recordsToDescription.className} text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center`}>
             Selo fonográfico independente focado em música digital e artistas virtuais.
           </p>
         </motion.div>
 
-        {/* Links */}
+        {/* Links Section - Using spacing.buttonGap */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md px-3 sm:px-0 flex flex-col gap-6 sm:gap-7 md:gap-8"
+          className={`w-full max-w-xs sm:max-w-sm md:max-w-md ${spacing.containerPadding.className} flex flex-col ${spacing.buttonGap.className}`}
         >
           {links.map((link, index) => {
             const Icon = link.icon
@@ -91,44 +91,34 @@ export default function App() {
                 key={index}
                 href={link.href}
                 target={link.href.startsWith('http') ? '_blank' : '_self'}
-                rel="noopener noreferrer"
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : ''}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
                 whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(212,180,95,0.3)' }}
-                className="block py-3.5 px-4 sm:p-4 md:p-4 border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group"
+                className={`block ${spacing.buttonPadding.className} border border-[rgba(212,180,95,0.3)] rounded-lg hover:border-[rgba(212,180,95,0.6)] transition-all duration-300 backdrop-blur-sm bg-[rgba(212,180,95,0.02)] group`}
               >
-                <div className="flex items-center gap-2 sm:gap-3">
+                <div className={`flex items-center ${spacing.iconToText.className}`}>
                   <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-[rgba(212,180,95,0.15)] flex items-center justify-center group-hover:bg-[rgba(212,180,95,0.25)] transition-colors">
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#d4b45f]" />
                   </div>
+
                   <div className="flex-1 min-w-0">
                     <p className="text-xs sm:text-sm font-semibold tracking-wide text-[#f5f5f5]">
                       {link.title}
                     </p>
-                    <p className="text-xs text-[#999999] font-light tracking-wide truncate mt-2 sm:mt-3">
+                    <p className="text-xs text-[#999999] font-light tracking-wide truncate">
                       {link.subtitle}
                     </p>
                   </div>
-                  <div className="flex-shrink-0 text-[#d4b45f] group-hover:translate-x-1 transition-transform text-xs">
+
+                  <div className="flex-shrink-0 ml-2 text-[#d4b45f] group-hover:translate-x-1 transition-transform">
                     →
                   </div>
                 </div>
               </motion.a>
             )
           })}
-        </motion.div>
-
-        {/* Footer */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-12 sm:mt-16 md:mt-20 text-center"
-        >
-          <p className="text-xs text-[#666666] font-light tracking-wide">
-            © 2024 Dark Room Records. All rights reserved.
-          </p>
         </motion.div>
       </div>
     </div>

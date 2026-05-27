@@ -82,7 +82,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md space-y-8 sm:space-y-10 md:space-y-12 px-3 sm:px-0"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md space-y-16 sm:space-y-20 md:space-y-24 px-3 sm:px-0"
         >
           {links.map((link, index) => {
             const Icon = link.icon

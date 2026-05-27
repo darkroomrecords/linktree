@@ -40,42 +40,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#050505] flex flex-col items-center justify-start px-4 pt-16 pb-20">
       <div className="w-full max-w-2xl flex flex-col items-center">
-        {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mb-12 text-center"
-        >
-          {/* Logo */}
-          <div className="relative mb-6 sm:mb-8 inline-block">
-            <motion.div
-              animate={{ opacity: [0.4, 0.7, 0.4] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-[rgba(212,180,95,0.2)] via-[rgba(212,180,95,0.15)] to-[rgba(212,180,95,0.2)] blur-3xl"
-              style={{ width: '120%', height: '120%', left: '-10%', top: '-10%' }}
-            />
-            <img
-              src="/images/logo.png"
-              alt="Dark Room Records"
-              className="h-48 w-48 sm:h-64 sm:w-64 md:h-72 md:w-72 relative z-10 drop-shadow-[0_0_80px_rgba(212,180,95,0.4)]"
-            />
+        {/* Logo Section */}
+        <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="text-center">
+          <div className="relative mb-4 sm:mb-6 inline-block">
+            <motion.div animate={{ opacity: [0.4, 0.7, 0.4] }} transition={{ duration: 4, repeat: Infinity }} className="absolute inset-0 rounded-full bg-gradient-to-r from-[rgba(212,180,95,0.2)] via-[rgba(212,180,95,0.15)] to-[rgba(212,180,95,0.2)] blur-3xl" style={{ width: '120%', height: '120%', left: '-10%', top: '-10%' }} />
+            <img src="/images/logo.png" alt="Dark Room Records" className="h-44 w-44 sm:h-56 sm:w-56 md:h-64 md:w-64 relative z-10 drop-shadow-[0_0_80px_rgba(212,180,95,0.4)]" />
           </div>
-
-          {/* Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-wider mb-1 sm:mb-2">
-            DARK ROOM
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-xl sm:text-2xl md:text-4xl font-light tracking-widest text-[#d4b45f] mb-3 sm:mb-4">
-            RECORDS
-          </p>
-
-          {/* Descrição */}
-          <p className="mt-5 sm:mt-6 text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center">
-            Música digital para artistas virtuais.
-          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider mb-1">DARK ROOM</h1>
+          <p className="text-lg sm:text-xl md:text-2xl font-light tracking-widest text-[#d4b45f] mb-3">RECORDS</p>
+          <p className="text-xs text-[#999999] font-light tracking-wide max-w-xs mx-auto text-center mb-6 sm:mb-8">Selo fonográfico independente focado em música digital e artistas virtuais.</p>
         </motion.div>
 
         {/* ESPAÇADOR INVISÍVEL FORÇADO PARA MOBILE */}

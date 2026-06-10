@@ -1,4 +1,4 @@
-import { Mail, Music, TrendingUp, Globe, Instagram } from 'lucide-react'
+import { Mail, Music, TrendingUp, Instagram } from 'lucide-react'
 import { motion } from 'framer-motion'
 // Spacing values are now hardcoded to ensure Tailwind compilation
 // import { spacing } from './config/spacing'
@@ -24,15 +24,9 @@ export default function Home() {
       icon: Instagram,
     },
     {
-      title: 'WEBSITE OFICIAL',
-      subtitle: 'www.thedarkroomrecords.com',
-      href: 'https://www.thedarkroomrecords.com',
-      icon: Globe,
-    },
-    {
       title: 'CONTATO / LABEL',
-      subtitle: 'contact@thedarkroomrecords.com',
-      href: 'mailto:contact@thedarkroomrecords.com',
+      subtitle: 'thedarkroomrecords@gmail.com',
+      href: 'mailto:thedarkroomrecords@gmail.com',
       icon: Mail,
     },
   ]
@@ -121,6 +115,9 @@ export default function Home() {
             </p>
             <p className="text-[9px] text-[#444444] tracking-widest font-light italic">
               "Música digital para artistas virtuais"
+            </p>
+            <p className="text-[8px] text-[#333333] tracking-[0.3em] font-light uppercase mt-2">
+              Produced by Gabriel Ribeiro
             </p>
           </motion.div>
         </footer>
